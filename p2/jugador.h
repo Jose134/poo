@@ -17,7 +17,7 @@ class Jugador : public Persona {
         std::list<Apuesta> apuestas_;
 
     public:
-        Crupier(
+        Jugador(
             std::string DNI,
             std::string codigo,
             std::string nombre="",
@@ -37,6 +37,9 @@ class Jugador : public Persona {
 
         std::list<Apuesta> getApuestas() const { return apuestas_; }
         void setApuestas();
+
+        int getDinero() const { return dinero_; }
+        void setDinero(int dinero) { dinero_ = dinero; }
 };
 
 #endif

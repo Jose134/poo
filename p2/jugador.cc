@@ -13,7 +13,7 @@ void Jugador::setApuestas () {
         Apuesta aux;
         char line[256];
         int count = 0;
-        while (std::getline(f, line, ',')) {
+        while (f.getline(line, ',')) {
             if      (count == 0) { aux.tipo = std::stoi(line); }
             else if (count == 1) { aux.valor = std::string(line); }
             else if (count == 2) { aux.cantidad = std::stoi(line); 
